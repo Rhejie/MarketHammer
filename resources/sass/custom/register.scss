@@ -1,0 +1,134 @@
+.register-container {
+    .card-header {
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        background: #EC3434;
+        color: white;
+        border-radius: 0;
+    }
+    .page-register {
+        .or-line{
+            text-align: center;
+            position: relative;
+    
+            &:after{
+                position: absolute;
+                right: 0px;
+                top: 10px;
+                content: "";
+                width: 100px;
+                border-top: 1px solid #E9E9E9;
+            }
+    
+            &:before{
+                position: absolute;
+                left: 0px;
+                top: 10px;
+                content: "";
+                width: 100px;
+                border: 1px solid #E9E9E9;
+            }
+        }
+    
+        input{
+            height: 40px;
+            border-radius: 2px;
+            border: 1px solid #EBEEF5;
+        }
+    
+        .btn{
+            border-radius: 2px !important; 
+            border: 1px solid #F5F5F5 !important;
+            width: 100%;
+            height: 40px;
+            position: relative;
+    
+            &:before{
+                position: absolute;
+                left: 16px;
+                top: 4px;
+                content: "";
+                width: 24px;
+                height: 24px;
+                background-repeat: no-repeat;
+                background-size: 24px 24px;
+            }
+        }
+    
+        .login-btn-submit{
+            background-color: $red;
+            color: $white;
+        }
+    
+        .login-btn-kakao{
+            background-color: $yellow;
+    
+            &:before{
+                top: 8px;
+                background-image: url('/image/kakao.png');
+                background-size: 26px 26px;
+            }
+        }
+    
+        .login-btn-fb{
+            background-color: $blue;
+            color: #fff;
+    
+            &:before{
+                background-image: url('/image/facebook.png');
+            }
+        }
+    
+        .login-btn-gmail{
+            background-color: $white;
+            color: #707070;
+    
+            &:before{
+                top: 8px;
+                background-image: url('/image/google.png');
+            }
+        }
+
+        .form-group {
+            .col-md-6:first-child {
+                padding-right: 2px;
+            }
+            .col-md-6:last-child {
+                padding-left: 2px;
+            }
+        }
+
+        .form-group:last-child {
+            margin-top: 10px;
+        }
+
+        @media only screen and (max-width: 768px){
+            .card-header {
+                font-size: 18px !important;
+            }
+        }
+
+        @media only screen and (max-width: 425px) {
+            .form-group {
+                .col-md-6:first-child {
+                    width: 50%;
+                }
+                .col-md-6:last-child {
+                    width: 50%;
+                }
+            }
+
+            input {
+                font-size: 12px;
+            }
+        }
+        @media only screen and (max-width: 768px) and (min-width: 426px) {
+            .register-column {
+                flex: 0 0 60% !important;
+                max-width: 100% !important;
+            }
+        }
+            
+    }
+}

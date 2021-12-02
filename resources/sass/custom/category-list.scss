@@ -1,0 +1,36 @@
+.category-list {
+    .el-dialog {
+        .el-input {
+            margin-top: 5px !important;
+        }
+    }
+    @media only screen {
+        .el-select-dropdown {
+            .el-select-dropdown__item:last-child {
+                height: 50px !important;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 425px) {
+        .table-category-list {
+            font-size: 11px !important;
+            
+            td {
+                .cell {
+                    .btn {
+                        font-size: 11px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .el-dialog {
+            width: 100% !important;
+            padding: 10px !important;
+            margin-top: 10vh !important;
+        }
+    }
+}

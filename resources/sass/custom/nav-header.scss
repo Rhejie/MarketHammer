@@ -1,0 +1,23 @@
+.backoffice-container {
+    .navbar {
+        .nav-item {
+            a {
+                color:#000 !important;
+            }
+    
+            .dropdown-menu {
+                .dropdown-item {
+                    color: black !important;
+                }
+            }
+        }   
+        
+        @media only screen and (max-width: 425px) {
+            .nav-item {
+                text-align: center !important;
+                font-size:  15px !important;
+            }
+        }
+        
+    }
+}

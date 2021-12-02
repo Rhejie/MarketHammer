@@ -1,0 +1,44 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateFormBuilderTemplateFormFieldsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('form_builder_template_form_fields', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('form_builder_field_id');
+            $table->unsignedBigInteger('form_submission_id');
+            $table->unsignedBigInteger('buyer_form_template_id');
+            $table->unsignedBigInteger('form_builder_template_form_group_id');
+            $table->integer('level');
+            $table->integer('position');
+            $table->unsignedBigInteger('created_by');
+            $table->dateTime('updated_by')->nullable()->default(null);
+            $table->softDeletes();
+            $table->timestamps();
+        });
+
+        Schema::table('form_builder_fields', function (Blueprint $table) {
+            $table->unsignedBigInteger('form_submissions_id')->nullable()->change();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('form_builder_template_form_fields');
+    }
+}

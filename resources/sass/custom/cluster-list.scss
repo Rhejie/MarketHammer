@@ -1,0 +1,42 @@
+.cluster-list {
+    .cluster-dialog {
+        .el-form-item__label {
+            margin-bottom: 5px !important;
+        }
+
+        .cluster-dropdown {
+            .el-select__tags {
+                padding: 5px !important;
+            }
+        }
+    }
+    @media only screen and (max-width: 425px) {
+        .table-cluster-list {
+            font-size: 11px !important;
+            
+            td {
+                .cell {
+                    .btn {
+                        font-size: 11px !important;
+                    }
+                }
+            }
+        }
+
+        .cluster-dialog {
+            .el-dialog {
+                width: 100% !important;
+                padding: 10px !important;
+                margin-top: 10vh !important;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) and (min-width: 426px) {
+        .cluster-dialog {
+            .el-dialog {
+                width: 60% !important;
+            }
+        }
+    }
+}

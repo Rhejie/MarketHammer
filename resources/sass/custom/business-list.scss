@@ -1,0 +1,197 @@
+.business-list {
+    .card-actions {
+        .action-button-container {
+            display: flex !important;
+
+            .filter-container, .cloud-container, .add-button-container {
+                display: inline !important;
+                margin-top: 5px;
+            }
+
+            div:nth-child(2), div:last-child {
+                margin-left: 5px;
+            }
+            
+        }
+    }
+   
+    @media only screen and (max-width: 936px) {
+        .el-upload-dragger {
+            width: 100% !important;
+            padding: 10px 15px !important;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .el-dialog {
+            width: 100% !important;
+            padding: 10px !important;
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        .filter-container {
+            .btn-outline-gray {
+                width: 15% !important;
+            }
+        }
+
+        .cloud-container {
+            .btn-outline-gray {
+                width: 15% !important;
+            }
+        }
+
+        .add-button-container {
+            .btn-red {
+                width: 60% !important;
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 540px) {
+        .image-caption {
+            margin-top: 55px !important;
+        }
+
+        .card-actions {
+            display: inline !important;
+            
+            .input-search-container {
+                display: inline-block !important;
+                width: 100% !important;
+            }
+
+            .filter-container, .cloud-container, .add-button-container {
+                display: inline-block !important;
+            }
+
+            .action-button-container {
+                display: block !important;
+                text-align: center !important;
+                margin-top: 10px !important;
+            }
+
+            .filter-container {
+                .btn-outline-gray {
+                    width: 20%;
+                }
+            }
+
+            .cloud-container {
+                .btn-outline-gray {
+                    width: 20%;
+                }
+            }
+
+            .add-button-container {
+                .btn-red {
+                    width: 54%;
+                }
+            }
+        }
+
+        // FOR ADD BUSINESS DIALOG FORM
+        .add-business-dialog {
+            overflow-x: hidden;
+            .business-form {
+                .el-form {
+                    .el-row {
+                        .el-col-12 {
+                            width: 100%;
+                        }
+                    }
+
+                    .business-address {
+                        .el-row {
+                            .el-col-8 {
+                                width: 50%;
+                            }
+
+                            .view-map-col {
+                                width: 100%;
+                                text-align: center;
+                            }
+
+                            .address-coordinates-input {
+                                width: 50%;
+                            }
+                        }
+                    }
+
+                    .operation-hours {
+                        table, thead, tbody, th, td, tr { 
+                            display: block; 
+                        }
+                        
+                        /* Hide table headers (but not display: none;, for accessibility) */
+                        thead tr { 
+                            position: absolute;
+                            top: -9999px;
+                            left: -9999px;
+                        }
+
+                        tbody {
+                            tr {
+                                td {
+                                    .el-date-editor {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+
+                        td:nth-of-type(1):before { content: "Day"; }
+                        td:nth-of-type(2):before { content: "From"; }
+                        td:nth-of-type(3):before { content: "To"; }
+                        td:nth-of-type(4):after { content: "Remove"; font-size: 11px; }
+
+                        td:last-child {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// GOOGLE MAPS DIALOG
+@media only screen and (max-width: 540px) {
+    .view-map-dialog {
+        .el-dialog {
+            margin-top: 0 !important;
+            width: 100% !important;
+
+            .el-form {
+                .el-row {
+                    .el-col-12 {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-height: 811px) {
+    .view-map-dialog {
+        .el-dialog {
+            margin-top: 0 !important;
+            width: 100% !important;
+
+            .vue-map-container {
+                height: 350px !important;
+            }
+        }
+    }
+}
+
+.businessListFilterContainer {
+    .el-icon-close {
+        float: right;
+    }
+
+    .el-icon-close:hover {
+        cursor: pointer;
+    }
+}

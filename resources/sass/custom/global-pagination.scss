@@ -1,0 +1,23 @@
+.backoffice-container {
+    .GlobalPagination {
+        .el-select {
+            margin-top: -3px !important;
+        }
+    
+        @media only screen and (max-width: 768px) {
+            text-align: center !important;
+        }
+    
+        @media only screen and (max-width: 425px) {
+            .el-pagination__sizes {
+                display: block !important;
+                width: 100% !important;
+                margin-bottom: 15px !important;
+    
+                .el-input {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}

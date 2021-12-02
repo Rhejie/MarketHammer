@@ -1,0 +1,35 @@
+.theme-list {
+    @media only screen and (max-width: 425px) {
+        .table-theme-list {
+            font-size: 11px !important;
+            
+            td {
+                .cell {
+                    .btn {
+                        font-size: 11px !important;
+                    }
+                }
+            }
+        }
+
+        .add-theme-dialog {
+            .el-dialog {
+                width: 100% !important;
+                padding: 10px !important;
+                margin-top: 10vh !important;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) and (min-width: 426px) {
+        .add-theme-dialog {
+            .el-dialog {
+                width: 60% !important;
+
+                .el-input {
+                    margin-top: 5px !important;
+                }
+            }
+        }
+    }
+}
